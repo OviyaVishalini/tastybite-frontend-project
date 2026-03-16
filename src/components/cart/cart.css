@@ -1,0 +1,89 @@
+/* Main Cart Wrapper */
+.cart-container {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: flex-start;
+  margin-left: 230px; /* ✅ Avoid sidebar overlap */
+}
+
+/* Card Style */
+.cart-card {
+  width: 18rem;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cart-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* Image */
+.cart-image {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Title */
+.cart-card .card-title {
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Description */
+.cart-card .card-text {
+  color: #666;
+  font-size: 0.95rem;
+  min-height: 40px;
+  text-align: center;
+}
+
+/* Button Section */
+.btn-section {
+  display: flex;
+ width:180;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* Remove Button */
+.btn-danger {
+  width: 48%;
+  border-radius: 8px;
+}
+
+/* Place Order Button */
+.btn-success {
+  width: 48%;
+  border-radius: 8px;
+}
+
+/* Empty Cart Message */
+.cart-empty {
+  font-size: 22px;
+  color: #777;
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .cart-container {
+    margin-left: 0; /* ✅ Sidebar hidden / collapsed on mobile */
+    justify-content: center;
+  }
+
+  .cart-card {
+    width: 90%;
+  }
+}

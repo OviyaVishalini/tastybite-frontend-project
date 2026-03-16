@@ -1,0 +1,137 @@
+/* ============================== */
+/* PAGE WRAPPER (CENTERED LAYOUT) */
+/* ============================== */
+.hotel-view-page {
+  margin-left: 230px;                      /* Sidebar space */
+  margin-top: 30px;
+  padding: 30px;
+
+  display: flex;
+  justify-content: center;                 /* Center horizontally */
+  box-sizing: border-box;
+}
+
+/* Inner wrapper to center content */
+.hotel-view-inner {
+  width: 100%;
+  max-width: 1200px;                       /* Center limit like dashboard */
+}
+
+/* ============================== */
+/* TITLES */
+/* ============================== */
+.hotel-view-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #c40000;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.hotel-view-sub {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* ============================== */
+/* CARD GRID (3 per row) */
+/* ============================== */
+.hotel-view {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   /* ⭐ Always 3 per row */
+  gap: 25px;
+}
+
+/* ============================== */
+/* INDIVIDUAL CARD */
+/* ============================== */
+.hotel-card{
+
+  height: 350px;
+  width: 250px;
+  border-radius: 12px;
+  border: 2px solid #e6e6e6;
+  background-color: #fff;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hotel-view .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.18);
+}
+
+.hotel-card img {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.hotel-view .card-title {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.hotel-view .card-text {
+  text-align: center;
+  font-weight: bold;
+  color: #666;
+  font-size: 0.95rem;
+  min-height: 40px;
+  
+}
+.hotel-card .card-text {
+  text-align: center;
+  font-size: 0.95rem;
+  min-height: 40px;
+  
+}
+
+
+/* ADD TO CART BUTTON */
+.hotel-view .btn-primary {
+  width: 200;
+  font-weight: 600;
+  margin-bottom: 30px;
+  background-color: #ff3b3b;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.hotel-view .btn-primary:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* ============================== */
+/* EMPTY MESSAGE */
+/* ============================== */
+.hotel-empty-msg {
+  font-size: 22px;
+  color: #777;
+  margin-top: 40px;
+  text-align: center;
+  grid-column: span 3;
+}
+
+/* ============================== */
+/* RESPONSIVE FIXES */
+/* ============================== */
+@media (max-width: 1024px) {
+  .hotel-view {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .hotel-view-page {
+    margin-left: 0;
+  }
+  .hotel-view {
+    grid-template-columns: repeat(1, 1fr); /* 1 per row */
+  }
+}

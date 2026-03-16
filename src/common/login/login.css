@@ -1,0 +1,146 @@
+/* =============================== */
+/* FINAL BEAUTIFUL LOGIN PAGE (UPDATED) */
+/* =============================== */
+
+/* Full page background */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d90429, #ff7b7b);
+  padding: 20px;
+  position: relative;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 0;
+}
+
+/* Login Card */
+.login-page {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 45px 50px;
+  border-radius: 22px;
+  width: 850px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease;
+}
+
+.login-page:hover {
+  transform: translateY(-4px);
+}
+
+/* Title */
+.create-account-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Layout of Image + Form */
+.login-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 45px;
+}
+
+/* Image Section */
+.img-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.sandwich-img {
+  width: 320px;
+  height: 320px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  /* Rotation removed */
+}
+
+/* Form Section */
+.login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+}
+
+/* Label styling — added spacing under label */
+.login-form label {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;  /* 👈 Added clean spacing before input box */
+}
+
+/* Each input */
+.login-form .form-control {
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  box-shadow: none !important;
+  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* Form spacing fix */
+.login-form .mb-3 {
+  margin-bottom: 24px !important;
+}
+
+/* Login Button */
+button {
+  background-color: #ffcc00 !important;
+  color: #800000 !important;
+  font-weight: 700 !important;
+  padding: 12px !important;
+  border-radius: 12px !important;
+  border: none;
+  font-size: 16px !important;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffe680 !important;
+  transform: scale(1.05);
+}
+
+/* Note text */
+.form-text {
+  color: #fff !important;
+  opacity: 0.85;
+}
+
+/* Mobile responsive */
+@media (max-width: 850px) {
+  .login-page {
+    width: 95%;
+    padding: 35px 28px;
+  }
+
+  .login-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .sandwich-img {
+    width: 260px;
+    height: 260px;
+    margin-bottom: 10px;
+  }
+}

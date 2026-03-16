@@ -1,0 +1,61 @@
+/* Full Sidebar Layout */
+.sidebar-container {
+  width: 230px;
+  height: 100vh;
+  background-color: #c40000;
+  padding: 20px 15px 0 15px;
+  box-shadow: 3px 0 10px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+/* Remove default spacing */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo / Username Title */
+.sidebar-user {
+  color: yellow;
+  font-size: 26px;
+  font-style: italic;
+  font-family: "Georgia", "Times New Roman", serif;
+  margin-bottom: 28px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Navigation Links */
+.sidebar-container a.nav-link {
+  color: yellow !important;
+  font-size: 18px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  margin: 6px 0;
+  transition: all 0.25s ease;
+  font-family: "Poppins", sans-serif;
+  display: block;
+}
+
+/* Hover State */
+.sidebar-container a.nav-link:hover {
+  background-color: #ffcc00;
+  color: #800000 !important;
+  transform: translateX(5px);
+}
+
+/* Active Link */
+.sidebar-container .active {
+  background-color: #ffcc00;
+  color: #800000 !important;
+  border-left: 5px solid white;
+  font-weight: 600;
+  padding-left: 18px !important; /* Adjust for border */
+}
