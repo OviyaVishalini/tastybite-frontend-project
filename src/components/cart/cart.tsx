@@ -10,6 +10,7 @@ function Cart() {
 
   useEffect(() => {
     getCartItems();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getCartItems = () => {

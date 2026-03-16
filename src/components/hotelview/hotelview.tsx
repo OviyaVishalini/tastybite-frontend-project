@@ -6,25 +6,27 @@ import Card from "react-bootstrap/Card";
 import CardImage from "../../assets/images/sandwich.jpg";
 import "./hotelview.css";
 import { getUserRole } from "../../utils";
-import { useSelector } from "react-redux";
+
 
 function Hotelview() {
   const userInfo = getUserRole();
   const params = useParams();
   const [hotel, setHotel] = useState<any>(null);
   const [hotelMenuItem, setHotelMenuItem] = useState([]);
-  const store = useSelector((state) => state);
+ 
+//const store = useSelector((state) => state);
 
   useEffect(() => {
-    const filter = hotelList.find((item: any) => item.id == params.id);
+    const filter = hotelList.find((item: any) => item.id === params.id);
     setHotel(filter);
     getItemForHotel();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getItemForHotel = () => {
     const menuItems = localStorage.getItem("menuItem");
     const parsed = JSON.parse(menuItems || "[]");
-    const filtered = parsed.filter((item: any) => item.hotelId == params.id);
+    const filtered = parsed.filter((item: any) => item.hotelId === params.id);
     setHotelMenuItem(filtered);
   };
 

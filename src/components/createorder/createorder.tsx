@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import { hotelList } from "../../config";
-import { Button, Col, Row } from "react-bootstrap";
+import { Button} from "react-bootstrap";
 import Table from "react-bootstrap/Table";
 import "./createorder.css";
 
